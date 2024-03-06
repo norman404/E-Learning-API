@@ -16,9 +16,11 @@ mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTop
 
 const courseRoutes = require('./src/routes/courseRoutes');
 const lessonRoutes = require('./src/routes/lessonRoutes');
+const questionRoutes = require('./src/routes/questionRoutes');
 
 app.use('/api/courses', courseRoutes);
 app.use('/api/lessons', lessonRoutes);
+app.use('/api/questions', questionRoutes);
 
 
 // Not Found Route (404)
