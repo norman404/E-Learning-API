@@ -14,7 +14,9 @@ mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTop
   .then(() => console.log('Connected to MongoDB'))
   .catch(err => console.error('Error connecting to MongoDB', err));
 
+const courseRoutes = require('./src/routes/courseRoutes');
 
+app.use('/api/courses', courseRoutes);
 
 
 // Not Found Route (404)
